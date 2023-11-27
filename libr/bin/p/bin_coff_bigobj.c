@@ -3,6 +3,10 @@
 #include <r_bin.h>
 #include <sdb/ht_uu.h>
 
+#define R_BIN_COFF_BIGOBJ 1
+#include "bin_coff.c"
+
+#if 0
 #include "coff/coff_bigobj.h"
 #include "coff/coff.h"
 
@@ -720,4 +724,6 @@ R_API RLibStruct radare_plugin = {
 	.data = &r_bin_plugin_coff_bigobj,
 	.version = R2_VERSION
 };
+#endif
+
 #endif

@@ -2,6 +2,11 @@
 
 #include <r_util.h>
 #include <stdbool.h>
+
+#define R_BIN_COFF_BIGOBJ 1
+#include "coff.c"
+
+#if 0
 #include "coff_bigobj.h"
 
 // copied from bfd
@@ -274,3 +279,5 @@ R_IPI RBinCoffBigObj *r_bin_coff_bigobj_new_buf(RBuffer *buf, bool verbose) {
 	r_bin_coff_bigobj_init (bin, buf, verbose);
 	return bin;
 }
+
+#endif
